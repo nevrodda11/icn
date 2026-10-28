@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+
+  --color-background: #ffffff;
+  --color-surface-soft: #f6f2e8;
+  --color-ink: #221e52;
+  --color-ink-muted: #595766;
+  --color-ink-subtle: #8a8a98;
+  --color-border: #e4e4ea;
+  --color-border-strong: #221e52;
+  --color-primary: #2a3583;
+  --color-primary-strong: #221e52;
+  --color-primary-contrast: #ffffff;
+  --color-link: #0074bc;
+  --color-secondary: #7cab97;
+  --color-accent: #d1c05e;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --tracking-tight: -0.03em;
+  --tracking-wide: 0.04em;
+  --tracking-caps: 0.14em;
+}
+
+html {
+  background-color: var(--color-background);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote {
+  margin: 0;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-caps);
+  text-transform: uppercase;
+}
+
+.eyebrow-rule {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyebrow-rule::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background-color: currentColor;
+}

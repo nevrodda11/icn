@@ -1,0 +1,281 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const tiles = [
+  {
+    number: "01",
+    label: "Theme",
+    title: "The 2028 Conference theme",
+    description:
+      "Titiro Whakamuri. Arataki Whakamua — the kaupapa guiding our gathering, and what it asks of us as NP/APNs.",
+    cta: "Read the theme",
+    href: "/theme",
+  },
+  {
+    number: "02",
+    label: "Journey",
+    title: "NZNO’s Journey to 2028",
+    description:
+      "From Helsinki to Nashville — the bid, the taonga, and the koha that carried us here.",
+    cta: "Read the story",
+    href: "/journey",
+  },
+  {
+    number: "03",
+    label: "Travel",
+    title: "Your journey to Aotearoa",
+    description:
+      "Visa information, travel resources, and a warm welcome to Aotearoa New Zealand.",
+    cta: "Plan your trip",
+    href: "/travel",
+  },
+  {
+    number: "04",
+    label: "Register",
+    title: "Register your interest",
+    description:
+      "Join the voyage. We’re keeping delegates updated as programme details and tickets are confirmed.",
+    cta: "Register now",
+    href: "/register",
+    featured: true,
+  },
+];
+---
+
+<Layout title="ICN NP/APN Network Conference 2028 · Te Whanganui-a-Tara">
+  <!-- Hero -->
+  <section
+    class="relative flex min-h-[720px] w-full flex-col justify-end overflow-hidden bg-primary-strong lg:min-h-[920px]"
+    style="background-image: url('/assets/Motif01.png'); background-size: cover; background-position: right center; background-repeat: no-repeat;"
+  >
+    <div
+      class="absolute inset-0"
+      style="background-image: linear-gradient(180deg, rgba(34,30,82,0.55) 0%, rgba(34,30,82,0.82) 55%, rgba(34,30,82,0.96) 100%);"
+    >
+    </div>
+    <div class="relative z-10 flex flex-col gap-12 px-6 pb-12 pt-20 lg:gap-14 lg:px-24 lg:pb-24 lg:pt-28">
+      <div class="flex items-center gap-3 lg:gap-4">
+        <span class="h-px w-6 bg-accent lg:w-12"></span>
+        <span class="eyebrow text-[11px] text-accent lg:text-xs"
+          >ICN NP/APN Network Conference · 2028</span
+        >
+      </div>
+      <div class="flex max-w-[1120px] flex-col gap-5">
+        <h1 class="font-display text-[36px] font-semibold leading-[1] tracking-[-0.03em] text-white sm:text-[44px] lg:text-[136px] lg:leading-[0.95] lg:tracking-[-0.035em]">
+          Titiro Whakamuri.<br />Arataki Whakamua.
+        </h1>
+        <p class="font-display italic text-[18px] font-normal leading-tight text-accent sm:text-[22px] lg:text-[44px]">
+          Look Back. Lean Forward.
+        </p>
+      </div>
+      <div class="flex flex-col gap-6 border-t border-white/20 pt-8 lg:flex-row lg:items-end lg:justify-between lg:pt-14">
+        <div class="flex flex-col gap-6 lg:flex-row lg:gap-14">
+          <div class="flex flex-col gap-1">
+            <span class="eyebrow text-[11px] text-white/60">Dates</span>
+            <span class="font-display text-[22px] font-semibold text-white lg:text-[32px]">
+              3 – 6 September 2028
+            </span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="eyebrow text-[11px] text-white/60">Location</span>
+            <span class="font-display text-[22px] font-semibold text-white lg:text-[32px]">
+              Te Whanganui-a-Tara
+            </span>
+            <span class="font-body text-sm text-white/80">
+              Wellington, Aotearoa New Zealand
+            </span>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="eyebrow text-[11px] text-white/60">Venue</span>
+            <span class="font-body text-[22px] font-semibold tracking-[-0.01em] text-white lg:text-[32px]">
+              Tākina
+            </span>
+            <span class="font-body text-sm text-white/80">
+              Convention &amp; Exhibition Centre
+            </span>
+          </div>
+        </div>
+        <a
+          href="/register"
+          class="inline-flex w-fit shrink-0 items-center justify-center gap-3 self-start whitespace-nowrap rounded-pill bg-accent px-7 py-4 text-base font-semibold text-primary-strong tracking-[0.04em] hover:brightness-95 transition lg:px-8 lg:py-5"
+        >
+          Register your interest
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+            <path
+              d="M3 9h11M10 4l5 5-5 5"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section class="flex flex-col items-center gap-12 bg-surface-soft px-6 py-20 lg:gap-14 lg:px-24 lg:py-32">
+    <div class="flex max-w-[820px] flex-col items-center gap-5 text-center lg:gap-6">
+      <div class="flex items-center gap-3">
+        <span class="h-px w-6 bg-primary lg:w-8"></span>
+        <span class="eyebrow text-[11px] text-primary lg:text-xs"
+          >Watch · The invitation</span
+        >
+        <span class="h-px w-6 bg-primary lg:w-8"></span>
+      </div>
+      <h2 class="font-display text-[32px] font-semibold leading-tight tracking-[-0.025em] text-ink lg:text-[56px]">
+        Hear our pōwhiri to the world.
+      </h2>
+      <p class="font-body text-sm leading-relaxed text-ink-muted lg:text-lg">
+        The bid film NZNO carried from Helsinki to Nashville — the voices, the
+        whenua, and the invitation to join us in 2028.
+      </p>
+    </div>
+    <div class="relative w-full max-w-[1248px] overflow-hidden rounded-lg bg-primary-strong">
+      <video
+        class="h-full w-full"
+        controls
+        preload="metadata"
+        poster="/assets/video-poster.jpg"
+      >
+        <source src="/assets/bid-film.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div
+        class="pointer-events-none absolute left-4 bottom-4 flex items-center gap-3 rounded-pill border border-white/20 bg-primary-strong/60 px-4 py-2 text-white backdrop-blur lg:left-8 lg:bottom-8"
+      >
+        <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+        <span class="font-body text-[11px] font-semibold tracking-[0.1em] uppercase lg:text-xs"
+          >4 min 28 sec · Presented at ICN Helsinki, 2025</span
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Whakataukī intro -->
+  <section class="border-b border-border bg-background px-6 py-20 lg:px-24 lg:py-32">
+    <div class="mx-auto flex max-w-[1248px] flex-col gap-10 lg:flex-row lg:gap-24">
+      <div class="flex max-w-sm shrink-0 flex-col gap-5 lg:w-[320px]">
+        <div class="flex items-center gap-3">
+          <span class="h-px w-8 bg-primary"></span>
+          <span class="eyebrow text-xs text-primary">Whakataukī</span>
+        </div>
+        <p class="font-body text-sm font-medium leading-relaxed text-ink-muted">
+          A Māori proverb that grounds the kaupapa of our conference.
+        </p>
+      </div>
+      <div class="flex max-w-[880px] flex-col gap-8">
+        <p class="font-display text-[32px] font-normal leading-tight tracking-[-0.02em] text-ink lg:text-[72px] lg:leading-[1.08]">
+          Ka mua, <em class="italic">ka muri</em> — as we move forward, we are
+          strengthened by the experiences, wisdom, and courage of those who have
+          gone before us.
+        </p>
+        <p class="max-w-[720px] font-body text-base leading-relaxed text-ink-muted lg:text-lg">
+          This is the kaupapa — the purpose and grounding — of our journey as
+          Nurse Practitioners and Advanced Practice Nurses. Across Aotearoa New
+          Zealand, we are leading change where it matters most — alongside
+          whānau, communities, and services working for better, fairer health
+          outcomes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aotearoa image moment -->
+  <section
+    class="relative flex min-h-[420px] w-full flex-col justify-end bg-primary-strong lg:min-h-[560px]"
+    style="background-image: url('/assets/bid-frame-55s.jpg'); background-size: cover; background-position: center;"
+  >
+    <div
+      class="absolute inset-0"
+      style="background-image: linear-gradient(0deg, rgba(34,30,82,0.78) 0%, rgba(34,30,82,0.15) 55%, rgba(34,30,82,0) 100%);"
+    >
+    </div>
+    <div class="relative z-10 flex flex-col gap-3 px-6 pb-10 pt-10 lg:flex-row lg:items-end lg:justify-between lg:gap-12 lg:px-24 lg:pb-12">
+      <div class="flex max-w-[820px] flex-col gap-3">
+        <span class="eyebrow text-[11px] text-accent lg:text-xs"
+          >Welcome to Aotearoa</span
+        >
+        <p class="font-display italic text-[26px] font-normal leading-tight tracking-[-0.015em] text-white lg:text-[44px]">
+          Where whenua meets moana, and voyages begin.
+        </p>
+      </div>
+      <span class="font-body text-xs text-white/60 lg:max-w-[220px] lg:text-right"
+        >The coastline of Aotearoa New Zealand</span
+      >
+    </div>
+  </section>
+
+  <!-- Section tiles -->
+  <section class="bg-background px-6 py-20 lg:px-24 lg:py-32">
+    <div class="mx-auto flex max-w-[1248px] flex-col gap-14">
+      <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between lg:gap-12">
+        <div class="flex max-w-[720px] flex-col gap-5">
+          <div class="flex items-center gap-3">
+            <span class="h-px w-8 bg-primary"></span>
+            <span class="eyebrow text-xs text-primary">Explore the kaupapa</span>
+          </div>
+          <h2 class="font-display text-[32px] font-semibold leading-tight tracking-[-0.025em] text-ink lg:text-[56px]">
+            Nāu to hoe, naku te hoe,<br />
+            <span class="text-primary">ka rere te waka.</span>
+          </h2>
+        </div>
+        <p class="max-w-[320px] font-body text-base leading-relaxed text-ink-muted lg:text-right">
+          Bring your paddle. We will bring ours. Together, we will move the
+          canoe forward.
+        </p>
+      </div>
+      <div class="flex flex-col gap-4 lg:flex-row lg:gap-6">
+        {
+          tiles.map((tile) => (
+            <a
+              href={tile.href}
+              class={`flex flex-1 flex-col justify-between gap-8 rounded-md border p-6 min-h-[280px] lg:p-8 lg:min-h-[420px] transition hover:-translate-y-1 ${tile.featured ? "bg-primary border-primary text-primary-contrast" : "border-border bg-background text-ink hover:border-primary"}`}
+            >
+              <div class="flex flex-col gap-6 lg:gap-8">
+                <div class="flex items-baseline justify-between">
+                  <span
+                    class={`font-display text-[32px] font-semibold leading-none tracking-[-0.03em] lg:text-[56px] ${tile.featured ? "text-accent" : "text-primary"}`}
+                  >
+                    {tile.number}
+                  </span>
+                  <span
+                    class={`eyebrow text-[11px] lg:text-xs ${tile.featured ? "text-white/70" : "text-ink-subtle"}`}
+                  >
+                    {tile.label}
+                  </span>
+                </div>
+                <h3
+                  class={`font-display text-[22px] font-semibold leading-tight tracking-[-0.02em] lg:text-[36px] ${tile.featured ? "text-white" : "text-ink"}`}
+                >
+                  {tile.title}
+                </h3>
+                <p
+                  class={`font-body text-sm leading-relaxed lg:text-base ${tile.featured ? "text-white/80" : "text-ink-muted"}`}
+                >
+                  {tile.description}
+                </p>
+              </div>
+              <div class="flex items-center justify-between">
+                <span
+                  class={`font-body text-sm font-semibold tracking-[0.04em] ${tile.featured ? "text-accent" : "text-primary"}`}
+                >
+                  {tile.cta}
+                </span>
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+                  <path
+                    d="M5 11h12M12 6l5 5-5 5"
+                    stroke={tile.featured ? "var(--color-accent)" : "var(--color-primary)"}
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

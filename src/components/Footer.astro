@@ -1,0 +1,67 @@
+---
+const groups = [
+  {
+    title: "The conference",
+    items: ["Theme", "NZNO's Journey", "The Taonga", "The Koha"],
+  },
+  {
+    title: "For delegates",
+    items: [
+      "Visa information",
+      "Tourism New Zealand",
+      "WellingtonNZ",
+      "Tākina venue",
+    ],
+  },
+  {
+    title: "Get in touch",
+    items: ["Register your interest", "Media enquiries", "conference@nzno.org.nz"],
+  },
+];
+---
+
+<footer class="bg-primary-strong text-white">
+  <div class="mx-auto flex max-w-[1440px] flex-col gap-14 px-6 pt-14 pb-10 lg:px-24 lg:pt-24 lg:pb-12">
+    <div class="flex flex-col gap-14 lg:flex-row lg:items-start lg:justify-between lg:gap-16">
+      <div class="flex max-w-[420px] flex-col gap-7">
+        <div class="flex items-center gap-5">
+          <img
+            src="/assets/ICN_logo_EN_baseline_W.png"
+            alt="ICN"
+            class="h-10 w-auto"
+          />
+          <span class="h-7 w-px bg-white/20"></span>
+          <img
+            src="/assets/NZNO_white_PNG.png"
+            alt="NZNO"
+            class="h-14 w-auto object-contain lg:h-16"
+          />
+        </div>
+        <p class="font-body text-sm leading-relaxed text-white/70">
+          The ICN NP/APN Network Conference 2028 is hosted by New Zealand Nurses
+          Organisation on behalf of the global nurse practitioner community.
+        </p>
+      </div>
+      <div class="flex flex-col gap-10 lg:flex-row lg:gap-16">
+        {
+          groups.map((group) => (
+            <div class="flex min-w-[180px] flex-col gap-4">
+              <span class="eyebrow text-[11px] text-accent">{group.title}</span>
+              {group.items.map((item) => (
+                <span class="font-body text-sm text-white">{item}</span>
+              ))}
+            </div>
+          ))
+        }
+      </div>
+    </div>
+    <div class="flex flex-col gap-3 border-t border-white/15 pt-6 lg:flex-row lg:items-center lg:justify-between lg:pt-8">
+      <span class="font-body text-xs text-white/60"
+        >© 2028 ICN NP/APN Network Conference · New Zealand Nurses Organisation</span
+      >
+      <span class="font-body italic text-xs text-white/60"
+        >Me mihi ki ngā mana whenua o Te Whanganui-a-Tara.</span
+      >
+    </div>
+  </div>
+</footer>

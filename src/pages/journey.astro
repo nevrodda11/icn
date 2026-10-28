@@ -1,0 +1,313 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const beats = [
+  {
+    year: "2025",
+    location: "Helsinki, Finland",
+    title: "NZNO presents the bid.",
+    body: "Our journey to 2028 began with a bid to host ICN's NP/APN Network Conference, presented to the ICN panel at their annual meeting in Helsinki.",
+    link: "Watch the bid video",
+  },
+  {
+    year: "2026",
+    location: "Nashville, USA",
+    title: "Aotearoa is announced as host.",
+    body: "At ICN's NP/APN Network Conference in September, Aotearoa New Zealand was confirmed as host of the 2028 gathering.",
+    link: "Watch the announcement",
+  },
+  {
+    year: "2026",
+    location: "Nashville · The taonga",
+    title: "A greenstone taonga is presented.",
+    body: "A patu pounamu, carved from pounamu and set in a tōtara case with pāua inlay, was gifted to the 2026 host nation — the United States of America.",
+    link: "Learn more about the taonga",
+  },
+  {
+    year: "2026",
+    location: "Nashville · The koha",
+    title: "Delegates receive a koha — a waka.",
+    body: "Each delegate was given a small waka (canoe), a koha carrying the invitation to make the great voyage to Aotearoa in 2028.",
+    link: "Learn more about the koha",
+  },
+];
+
+const taongaElements = [
+  {
+    number: "01",
+    title: "Pounamu · Greenstone",
+    body: "A patu pounamu — a traditional greenstone hand weapon — carved from pounamu, a stone highly valued in Māori culture, drawn from the wai Māori (fresh waters) of Aotearoa.",
+  },
+  {
+    number: "02",
+    title: "Tōtara · Native wood",
+    body: "The presentation case is carved from tōtara, an Aotearoa New Zealand native tree long valued for its warmth, strength, and suitability for carving.",
+  },
+  {
+    number: "03",
+    title: "Pāua · Shell inlay",
+    body: "Pāua shell inlay at the centre of the case represents the moana — the oceans — bringing together whenua, rakau, and wai Māori in one piece.",
+  },
+];
+---
+
+<Layout title="NZNO's Journey to 2028 · The Taonga, the Koha, the Media Release">
+  <!-- Page hero -->
+  <section class="border-b border-border bg-background px-6 pt-12 pb-16 lg:px-24 lg:pt-24 lg:pb-28">
+    <a href="/" class="inline-flex items-center gap-2 text-primary">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+      <span class="font-body text-sm font-semibold tracking-[0.04em]">Back to Home</span>
+    </a>
+    <div class="mt-10 flex flex-col gap-8 lg:mt-12 lg:flex-row lg:items-end lg:justify-between lg:gap-24">
+      <div class="flex max-w-[940px] flex-col gap-6">
+        <div class="flex items-center gap-3">
+          <span class="h-px w-8 bg-primary"></span>
+          <span class="eyebrow text-xs text-primary">02 · NZNO's Journey to 2028</span>
+        </div>
+        <h1 class="font-display text-[44px] font-semibold leading-[0.98] tracking-[-0.035em] text-ink lg:text-[112px]">
+          From Helsinki<br />to <span class="text-primary">Nashville</span><br />to Aotearoa.
+        </h1>
+      </div>
+      <p class="max-w-sm font-body text-base leading-relaxed text-ink-muted lg:text-lg">
+        The story of how New Zealand Nurses Organisation won the honour of
+        hosting ICN's 2028 NP/APN Network Conference — and the taonga and koha
+        that carry our invitation to the world.
+      </p>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="bg-background px-6 py-20 lg:px-24 lg:py-32">
+    <div class="mx-auto flex max-w-[1248px] flex-col gap-14 lg:gap-16">
+      <div class="flex max-w-[720px] flex-col gap-5">
+        <div class="flex items-center gap-3">
+          <span class="h-px w-8 bg-secondary"></span>
+          <span class="eyebrow text-xs text-secondary">The journey so far</span>
+        </div>
+        <h2 class="font-display text-[32px] font-semibold leading-tight tracking-[-0.025em] text-ink lg:text-[56px]">
+          Four moments that brought the waka here.
+        </h2>
+      </div>
+      <div class="flex flex-col">
+        {
+          beats.map((beat) => (
+            <div class="flex flex-col gap-5 border-t border-border py-10 lg:flex-row lg:gap-16">
+              <div class="flex shrink-0 flex-col gap-3 lg:w-[180px]">
+                <span class="font-display text-[48px] font-semibold leading-none tracking-[-0.03em] text-primary lg:text-[72px]">
+                  {beat.year}
+                </span>
+                <span class="eyebrow text-xs text-ink-subtle">{beat.location}</span>
+              </div>
+              <div class="flex max-w-[760px] flex-1 flex-col gap-4">
+                <h3 class="font-display text-[26px] font-semibold leading-tight tracking-[-0.02em] text-ink lg:text-[40px]">
+                  {beat.title}
+                </h3>
+                <p class="font-body text-base leading-relaxed text-ink-muted lg:text-lg">
+                  {beat.body}
+                </p>
+                <div class="mt-2 flex items-center gap-2.5">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <circle cx="9" cy="9" r="8" stroke="var(--color-link)" stroke-width="1.4" />
+                    <path d="M7 6.5l4 2.5-4 2.5V6.5z" fill="var(--color-link)" />
+                  </svg>
+                  <span class="font-body text-sm font-semibold tracking-[0.04em] text-link">
+                    {beat.link}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Taonga story -->
+  <section id="taonga" class="bg-primary-strong px-6 py-20 text-white lg:px-24 lg:py-32">
+    <div class="mx-auto flex max-w-[1248px] flex-col gap-14 lg:gap-20">
+      <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:gap-24">
+        <div class="flex max-w-sm shrink-0 flex-col gap-5 lg:w-[280px]">
+          <div class="flex items-center gap-3">
+            <span class="h-px w-8 bg-accent"></span>
+            <span class="eyebrow text-xs text-accent">The Taonga · Treasure</span>
+          </div>
+          <p class="font-body text-sm font-medium leading-relaxed text-white/65">
+            Commissioned by NZNO. Carved by Wiremu Barriball, a Māori visual
+            artist and musician.
+          </p>
+        </div>
+        <h2 class="max-w-[820px] font-display text-[32px] font-semibold leading-tight tracking-[-0.03em] text-white lg:text-[88px] lg:leading-[1.02]">
+          A patu pounamu —
+          <em class="italic text-accent">a greenstone treasure</em> — carried
+          across the Pacific.
+        </h2>
+      </div>
+      <div class="grid gap-4 lg:grid-cols-3 lg:gap-6">
+        {
+          taongaElements.map((el) => (
+            <div class="flex flex-col gap-6 rounded-md border border-white/15 bg-white/5 p-6 lg:p-8">
+              <span class="font-display italic text-[32px] font-normal leading-none text-accent lg:text-[40px]">
+                {el.number}
+              </span>
+              <div class="flex flex-col gap-3">
+                <h3 class="font-display text-[20px] font-semibold leading-tight tracking-[-0.015em] text-white lg:text-[24px]">
+                  {el.title}
+                </h3>
+                <p class="font-body text-sm leading-relaxed text-white/75">
+                  {el.body}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Ceremony image -->
+  <section class="flex w-full flex-col bg-primary-strong">
+    <div
+      class="h-[260px] w-full bg-cover bg-center lg:h-[720px]"
+      style="background-image: url('/assets/scan-170s-clean.jpg');"
+    >
+    </div>
+    <div class="flex flex-col gap-2 px-6 py-6 text-white lg:flex-row lg:items-start lg:justify-between lg:gap-12 lg:px-24 lg:pb-12 lg:pt-8">
+      <span class="eyebrow text-xs text-accent">Image · Whakapūmau — the ceremony</span>
+      <span class="font-body text-xs text-white/50 lg:max-w-[320px] lg:text-right"
+        >Film still from NZNO's bid film to ICN · 2025</span
+      >
+    </div>
+  </section>
+
+  <!-- Koha story -->
+  <section class="bg-background px-6 py-20 text-ink lg:px-24 lg:py-32">
+    <div class="mx-auto flex max-w-[1248px] flex-col gap-20 lg:gap-24">
+      <div class="flex flex-col gap-10 lg:flex-row lg:items-end lg:gap-24">
+        <div class="flex max-w-sm shrink-0 flex-col gap-5 lg:w-[280px]">
+          <div class="flex items-center gap-3">
+            <span class="h-px w-8 bg-secondary"></span>
+            <span class="eyebrow text-xs text-secondary">The Koha · Gift</span>
+          </div>
+          <p class="font-body text-sm font-medium leading-relaxed text-ink-muted">
+            Each delegate in Nashville carried a waka home — a small canoe
+            gifted as both honour and invitation.
+          </p>
+        </div>
+        <h2 class="max-w-[820px] font-display text-[32px] font-normal leading-tight tracking-[-0.025em] text-ink lg:text-[72px] lg:leading-[1.08]">
+          Each nurse brings their own
+          <em class="italic text-primary">hoe</em> — their own paddle, their own mātauranga.
+        </h2>
+      </div>
+      <div class="flex flex-col gap-10 lg:flex-row lg:gap-24">
+        <div class="hidden shrink-0 lg:block lg:w-[280px]"></div>
+        <div class="flex max-w-[820px] flex-col gap-8">
+          <p class="font-body text-base leading-relaxed text-ink-muted lg:text-lg">
+            Each Nurse Practitioner and Advanced Practice Nurse brings their own
+            hoe (paddle), carrying the knowledge, experience, innovation, and
+            wisdom gathered from their communities and health systems.
+          </p>
+          <p class="font-body text-base leading-relaxed text-ink-muted lg:text-lg">
+            When these paddles come together in Aotearoa New Zealand, the global
+            waka (canoe) of advanced nursing practice is strengthened and
+            propelled forward. We are not asking you to simply attend a
+            conference. We are inviting you to join a collective voyage.
+          </p>
+          <p class="font-body text-base leading-relaxed text-ink-muted lg:text-lg">
+            Your journey from your homeland to Aotearoa becomes symbolic of the
+            great ocean voyages of our tīpuna (ancestors). Through kōrero,
+            learning, and relationship-building, we paddle the waka toward a
+            healthier future for all peoples.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Poetic callout -->
+  <section class="border-y border-border bg-surface-soft px-6 py-24 text-center text-ink lg:px-24 lg:py-40">
+    <div class="mx-auto flex max-w-[1100px] flex-col items-center gap-10 lg:gap-14">
+      <div class="flex items-center gap-3">
+        <span class="h-px w-6 bg-primary lg:w-8"></span>
+        <span class="eyebrow text-[11px] text-primary lg:text-xs"
+          >An invitation · He pōwhiri</span
+        >
+        <span class="h-px w-6 bg-primary lg:w-8"></span>
+      </div>
+      <blockquote class="font-display text-[44px] font-normal leading-[1.04] tracking-[-0.03em] text-ink lg:text-[108px] lg:leading-[1.02]">
+        Nāu to hoe,<br />
+        <em class="italic text-primary">naku te hoe,</em><br />
+        ka rere te waka.
+      </blockquote>
+      <p class="max-w-[640px] font-body text-base leading-relaxed text-ink lg:text-xl">
+        Bring your paddle. We will bring ours. Together, we will move the canoe
+        forward.
+      </p>
+    </div>
+  </section>
+
+  <!-- Media release -->
+  <section class="bg-background px-6 py-20 lg:px-24 lg:py-32">
+    <div class="mx-auto flex max-w-[1248px] flex-col gap-10 lg:flex-row lg:items-start lg:gap-24">
+      <div class="flex max-w-sm shrink-0 flex-col gap-5 lg:w-[280px]">
+        <div class="flex items-center gap-3">
+          <span class="h-px w-8 bg-primary"></span>
+          <span class="eyebrow text-xs text-primary">NZNO Media Release</span>
+        </div>
+        <p class="font-body text-sm font-medium leading-relaxed text-ink-muted">
+          Published by New Zealand Nurses Organisation, September 2026.
+        </p>
+      </div>
+      <div class="flex max-w-[820px] flex-1 flex-col gap-8">
+        <h3 class="font-display text-[28px] font-semibold leading-tight tracking-[-0.02em] text-ink lg:text-[40px]">
+          Aotearoa New Zealand will host ICN's 2028 NP/APN Network Conference
+        </h3>
+        <p class="font-body text-base leading-relaxed text-ink-muted lg:text-lg">
+          The announcement was made at the ICN NP/APN Network Conference in
+          Nashville, Tennessee, with NZNO presenting a taonga to the host nation
+          and gifting delegates a waka in anticipation of the collective voyage
+          to Te Whanganui-a-Tara in 2028.
+        </p>
+        <a
+          href="#"
+          class="inline-flex w-fit items-center gap-5 rounded-md border border-border bg-surface-soft px-7 py-5 text-primary"
+        >
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M7 3h7a1 1 0 011 1v13H6V4a1 1 0 011-1z" stroke="currentColor" stroke-width="1.4" />
+            <path d="M9 7h4M9 10h4M9 13h3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+          </svg>
+          <span class="font-body text-sm font-semibold tracking-[0.04em]">Read the full media release</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Up next -->
+  <section class="border-t border-border bg-background px-6 py-20 lg:px-24 lg:py-28">
+    <div class="mx-auto flex max-w-[1248px] flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-16">
+      <div class="flex max-w-[720px] flex-col gap-4">
+        <span class="eyebrow text-xs text-ink-subtle">Up next · 03</span>
+        <h3 class="font-display text-[32px] font-semibold leading-tight tracking-[-0.025em] text-ink lg:text-[56px]">
+          Your journey to Aotearoa New Zealand
+        </h3>
+        <p class="font-body text-base leading-relaxed text-ink-muted lg:text-lg">
+          Visa information, travel resources, and a welcome to Te
+          Whanganui-a-Tara, Wellington.
+        </p>
+      </div>
+      <a
+        href="/travel"
+        class="inline-flex w-fit items-center gap-3 rounded-pill bg-ink px-7 py-4 text-base font-semibold text-primary-contrast tracking-[0.04em] hover:bg-primary transition lg:px-8 lg:py-5"
+      >
+        Plan your trip
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M3 9h11M10 4l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>
